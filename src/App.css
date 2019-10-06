@@ -1,0 +1,209 @@
+@import url('https://images.wallpaperscraft.ru/image/solnce_zakat_more_planety_84826_300x168.jpg');
+
+.App{
+    display: grid;
+    width: 100%;
+    grid-template-rows: 60px 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas: 
+    "form"
+    "weather";
+}
+.form{
+   grid-area: form; 
+}
+.weather{
+    grid-area: weather;
+}
+@media (max-width: 600px){
+    .App{
+        display: grid;
+        width:100% ;
+        height: 100vh;
+        grid-template-rows: 60px 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        background: url("img/pl.jpg")  center center  no-repeat;
+        background-size: cover;
+        grid-template-areas:
+        "form"
+        "weather"
+    }
+    .weather{
+        height: 100%;
+    }
+    .inputCity{
+        height: 30px;
+        width: 95%;
+        margin-top:10px;
+    }
+    .buttonSearch{
+        text-align: center;
+        height: 35px;
+        width: 96%;
+    }
+    .searchPath{
+        text-align: center;
+        grid-area: searchPath;
+    }
+    .weatherInfo{
+        margin-top: 70px;
+        display: block;
+    }
+    .weatherInfo span{
+        display: block;
+    }
+    .temp{
+        font-size:40px;
+        font-weight: bold;
+    }
+    .sun {
+        display: block;
+    }
+    .weatherInfoFirstPath{
+        padding: 10px;
+    }
+    .weatherInfoSecondPath{
+        padding: 10px;
+    }
+    .settingImg{
+        padding: 5px;
+    }
+    .formSearchAndSetting{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "searchPath searchPath searchPath"
+        "setting error status"
+    }
+    .error{
+        color: red;
+        font-size: 24px;
+        font-weight: bold;
+        grid-area: error;
+        text-align: center;
+    }
+    .setting{
+        grid-area: setting;
+    }
+    .status{
+        display: grid;
+        grid-area: status;
+        margin-top:5px;
+        justify-content: flex-end;
+        margin-right: 5px;
+    }
+    
+
+}
+
+@media (min-width: 600px){
+    .App{
+        margin-top:100px;
+        height: 500px;
+        display: grid;
+        width:70% ;
+        grid-template-rows: 200px 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        background: url("img/pl.jpg")  center center  no-repeat;
+        background-size: cover;
+        border: solid 2px white;
+        border-radius: 150px;
+        grid-template-areas:
+        "form"
+        "weather"
+    }
+    .weatherInfo{
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .time{
+        font-size: 30px;
+    }
+    .weatherInfoSecondPath{
+        display: grid;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+    .weatherInfo span{
+        display: block;
+    }
+    .temp{
+        font-size:40px;
+        font-weight: bold;
+    }
+    .sun {
+        display: block;
+    }
+    .settingImg{
+        margin-left: 5px;
+    }
+    .formSearchAndSetting{
+        display: flex;
+        justify-content: center;
+    }
+    .form{
+        margin-top: 20px;
+    }
+    .weather{
+        color: white;
+    }
+    .inputCity{
+        height: 29px;
+        font-size:18px;
+    }
+    .buttonSearch{
+        height: 35px; 
+        font-size:18px;    
+    }
+    .error{
+        color: red;
+        font-size: 26px;
+        position: absolute;
+        margin-top:40px;
+        font-weight: bold;
+    }
+}
+
+
+body{
+    background: rgba(73,155,234,1);
+    background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(100,119,219,1) 27%, rgba(146,56,193,1) 74%, rgba(171,22,179,1) 99%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(27%, rgba(100,119,219,1)), color-stop(74%, rgba(146,56,193,1)), color-stop(99%, rgba(171,22,179,1)));
+    background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(100,119,219,1) 27%, rgba(146,56,193,1) 74%, rgba(171,22,179,1) 99%);
+    background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(100,119,219,1) 27%, rgba(146,56,193,1) 74%, rgba(171,22,179,1) 99%);
+    background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(100,119,219,1) 27%, rgba(146,56,193,1) 74%, rgba(171,22,179,1) 99%);
+    background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(100,119,219,1) 27%, rgba(146,56,193,1) 74%, rgba(171,22,179,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#ab16b3', GradientType=1 );
+}
+.setting img{
+    width: 35px;
+}
+.setting img:hover{
+    cursor: pointer;
+}
+.menuSetting{
+    position: absolute;
+    background: white;
+}
+.menuSetting div{
+    border: solid 1px black;
+    padding: 1px;
+    cursor: pointer;
+    height: 25px;
+    width: 200px;
+}
+.menuSetting div:hover{
+    background: grey;
+}
+.status img{
+    width: 35px;
+}
+.status{
+    margin-left:5px;
+}
+
+
